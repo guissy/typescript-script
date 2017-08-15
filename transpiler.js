@@ -54,10 +54,13 @@
         } else {
             (function () {
                 var filename;
+                var compileOptions = ts.defaultInitCompilerOptions;
+                compileOptions.jsx = 2; // jsx: React
                 for (num = 0; num < scripts.data.length; num++) {
                     filename = scripts.name[num] = scripts.name[num].slice(scripts.name[num].lastIndexOf('/') + 1);
                     var src = scripts.data[num];
-                    source += ts.transpile(src);
+
+                    source += ts.transpile(src, compileOptions);
                 }
             })();
         }

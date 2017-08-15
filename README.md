@@ -15,6 +15,8 @@ And then you can use script tags that load `.ts` files or even have `typescript`
     setTimeout(()=>console.log('hello'));
 </script>
 ```
+## Fixed
+fixed a issue for jsx
 
 ## Sample
 ### Plunker
