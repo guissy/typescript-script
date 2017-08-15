@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//rawgit.com/Microsoft/TypeScript/master/lib/typescriptServices.js"></script>
+    <script src="//cdn.bootcss.com/react/15.4.2/react.js"></script>
+    <script src="//cdn.bootcss.com/react/15.4.2/react-dom.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/typescript">
+    setTimeout(()=>console.log('hello'));
+    class Main extends React.PureComponent {
+    constructor(props) {
+      super(props);
+      this.state = {message: 'React Works!'};
+    }
+
+    componentDidMount() {
+
+    }
+
+    render() {
+      return <div className="animated flash">{this.state.message}</div>
+    }
+  }
+
+  ReactDOM.render(<Main/>, root);
+</script>
+<script src="https://cdn.rawgit.com/guissy/typescript-script/adddfb55/transpiler.js"></script>
+</body>
+</html>
